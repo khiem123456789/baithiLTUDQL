@@ -1,4 +1,4 @@
-package com.example.baithicuoiki.controller;
+package com.example.baithicuoiki.controller.admin;
 
 import com.example.baithicuoiki.model.Category;
 import com.example.baithicuoiki.model.Product;
@@ -6,21 +6,20 @@ import com.example.baithicuoiki.service.CategoryService;
 import com.example.baithicuoiki.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/product")
-public class ProductApiController {
+@RequestMapping("/api/admin/product")
+@PreAuthorize("hasRole('ADMIN')")
+public class AdminProductApiController {
     @Autowired
     private ProductService productService;
     @Autowired
     private CategoryService categoryService;
-    @GetMapping
-    public List<Product> getAllProducts(){
-        return productService.getAllProducts();
-    }
+
 
     @PostMapping
     public  Product createProduct(@RequestBody Product product){

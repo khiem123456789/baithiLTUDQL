@@ -1,4 +1,4 @@
-package com.example.baithicuoiki.controller;
+package com.example.baithicuoiki.controller.admin;
 
 import com.example.baithicuoiki.dto.StockEntryDTO;
 import com.example.baithicuoiki.model.Product;
@@ -9,14 +9,12 @@ import com.example.baithicuoiki.service.StockEntryService;
 import com.example.baithicuoiki.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin")
-@PreAuthorize("hasRole('ADMIN')")
 public class StockEntryApiController {
     @Autowired
     private ProductService productService;

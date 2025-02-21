@@ -12,7 +12,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/user/customer")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('USER')")
 public class CustomerApiUserController {
 
     private final CustomerService customerService;

@@ -43,23 +43,4 @@ public class StatisticsController {
         return ResponseEntity.ok(statisticsService.getProductSalesCount());
     }
 
-//    // API: Lọc đơn hàng theo ngày
-//    @GetMapping("/orders/by-date")
-//    public ResponseEntity<List<OrderStatisticDTO>> getOrdersByDate(
-//            @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-//        return ResponseEntity.ok(statisticsService.getOrdersByDate(date));
-//    }
-//
-//    // API: Lọc đơn hàng theo tháng và năm
-//    @GetMapping("/orders/by-month-year")
-//    public ResponseEntity<List<OrderStatisticDTO>> getOrdersByMonthAndYear(
-//            @RequestParam("month") int month, @RequestParam("year") int year) {
-//        return ResponseEntity.ok(statisticsService.getOrdersByMonthAndYear(month, year));
-//    }
-//
-//    // API: Lọc đơn hàng theo năm
-//    @GetMapping("/orders/by-year")
-//    public ResponseEntity<List<OrderStatisticDTO>> getOrdersByYear(@RequestParam("year") int year) {
-//        return ResponseEntity.ok(statisticsService.getOrdersByYear(year));
-//    }
 }

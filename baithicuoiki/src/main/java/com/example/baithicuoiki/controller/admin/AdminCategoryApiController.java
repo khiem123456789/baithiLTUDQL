@@ -1,9 +1,8 @@
-package com.example.baithicuoiki.controller;
+package com.example.baithicuoiki.controller.admin;
+
 
 import com.example.baithicuoiki.model.Category;
-import com.example.baithicuoiki.model.Product;
 import com.example.baithicuoiki.service.CategoryService;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,17 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/category")
-public class CategoryApiController {
+@RequestMapping("/api/admin/category")
+public class AdminCategoryApiController {
+
     @Autowired
-    private CategoryService categoryService;
-
-    @GetMapping
-    public List<Category> getAllCategories() {
-        return categoryService.getAllCategories();
-    }
-
-    @PostMapping
+    private CategoryService categoryService;  @PostMapping
     public void createCategory(@RequestBody Category category) {
         categoryService.addCategory(category);
     }

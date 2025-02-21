@@ -1,6 +1,5 @@
-package com.example.baithicuoiki.controller;
+package com.example.baithicuoiki.controller.admin;
 
-import com.example.baithicuoiki.model.Product;
 import com.example.baithicuoiki.model.Supplier;
 import com.example.baithicuoiki.repository.SupplierRepository;
 import com.example.baithicuoiki.service.SupplierService;
@@ -14,7 +13,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/admin/supplier")
-@PreAuthorize("hasRole('ADMIN')") // Chỉ ADMIN có thể truy cập
 public class SupplierApiController {
     @Autowired
     private SupplierRepository supplierRepository;

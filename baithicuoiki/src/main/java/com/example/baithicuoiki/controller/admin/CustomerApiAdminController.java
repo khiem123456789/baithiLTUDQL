@@ -13,18 +13,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/admin/customer")
 @RequiredArgsConstructor
-@PreAuthorize("hasRole('ADMIN')")
 public class CustomerApiAdminController {
     private final CustomerService customerService;
 
-    // Lấy tất cả khách hàng (Chỉ cho phép ADMIN)
     @GetMapping
-
     public ResponseEntity<List<Customer>> getAllCustomers() {
         List<Customer> customers = customerService.getAllCustomers();
         return ResponseEntity.ok(customers);
     }
-    // Thêm mới khách hàng (Chỉ cho phép ADMIN)
     @PostMapping
     public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
         try {
@@ -35,7 +31,6 @@ public class CustomerApiAdminController {
         }
     }
 
-    // Cập nhật thông tin khách hàng (Chỉ cho phép ADMIN)
     @PutMapping("/{id}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
         try {
@@ -47,7 +42,6 @@ public class CustomerApiAdminController {
         }
     }
 
-    // Xóa khách hàng (Chỉ cho phép ADMIN)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCustomerById(@PathVariable Long id) {
         try {

@@ -56,9 +56,9 @@ public class SecurityConfig {
                 })) // Bật CORS
                 .csrf(AbstractHttpConfigurer::disable)// Vô hiệu hóa CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**","/api/cart/**","/api/statistics/**").permitAll()
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN") // Chỉ ADMIN mới truy cập
-                        .requestMatchers("/api/user/**").hasAnyRole("USER", "ADMIN") // USER & ADMIN truy cập// Cho phép đăng ký, đăng nhập
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/admin/**","/api/statistics/**").hasRole("ADMIN") // Chỉ ADMIN mới truy cập
+                        .requestMatchers("/api/user/**","/api/cart/**").hasAnyRole("USER", "ADMIN") // USER & ADMIN truy cập// Cho phép đăng ký, đăng nhập
                         .anyRequest().authenticated()  // Các API khác cần xác thực
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
