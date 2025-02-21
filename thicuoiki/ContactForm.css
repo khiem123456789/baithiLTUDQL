@@ -1,0 +1,60 @@
+.contact-form-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h4 {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.contact-form-container ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.contact-form-container ul li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.contact-form-container ul li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 18px;
+    color: #d32f2f;
+}
+
+.contact-form-container .ant-form-item-label label {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form-container .ant-btn-primary {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    font-weight: bold;
+    width: 100%;
+}
+
+.contact-form-container .ant-btn-primary:hover {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+.contact-form-container a {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.contact-form-container a:hover {
+    text-decoration: underline;
+}

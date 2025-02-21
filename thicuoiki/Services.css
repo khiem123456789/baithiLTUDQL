@@ -1,0 +1,44 @@
+.services-container {
+    text-align: center;
+    padding: 50px 20px;
+    /* background: url("https://blackstones.vn/wp-content/uploads/2025/01/2-BANNER-Bls-2048x756.webp") no-repeat center; */
+    background-size: cover;
+}
+
+.services-title {
+    color: white;
+    font-weight: bold;
+}
+
+.services-subtitle {
+    display: block;
+    margin-bottom: 20px;
+    color: #141414;
+}
+
+.service-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}s
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.services-button-container {
+    margin-top: 20px;
+}
+
+.view-more-button {
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}

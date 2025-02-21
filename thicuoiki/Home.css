@@ -1,0 +1,113 @@
+/* Home.css */
+.home-container {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  /* ====== BANNER ====== */
+  .banner {
+    background: url('../assets/banner.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(13, 13, 13);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .call-button {
+    background-color: #ffcc00;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .call-button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+  }
+  
+  /* ====== GIỚI THIỆU ====== */
+  .intro-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+  }
+  
+  .intro-card {
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== DỊCH VỤ ====== */
+  .services-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .services-section h2 {
+    margin-bottom: 30px;
+  }
+  
+  .ant-card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .ant-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* ====== TẠI SAO CHỌN CHÚNG TÔI ====== */
+  .why-choose-us {
+    background-color: #fff8e1;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* ====== ĐÁNH GIÁ KHÁCH HÀNG ====== */
+  .testimonials {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonials .ant-card {
+    background-color: white;
+  }
+  
+  /* ====== LIÊN HỆ ====== */
+  .contact-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .contact-section .ant-btn {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    background-color: #ffcc00;
+    border: none;
+  }
+  
+  .contact-section .ant-btn:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+  }
+  
