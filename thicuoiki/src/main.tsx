@@ -17,7 +17,9 @@ import StatisticsPage from "./pages/StatisticsPage.tsx";
 import { readRoles } from "./utils/localstorage.ts";
 import ProductAdminPage from "./pages/ProductAdminPage.tsx";
 import ProductUserPage from "./pages/ProductUserPage.tsx";
-
+import Home from "./pages/Home.tsx";
+import ContactForm from "./pages/ContactForm.tsx";
+import Services from "./pages/Services.tsx";
 const role = readRoles() || "ROLE_USER";
 const basePagePath = role === "ROLE_ADMIN" ? "/page/admin" : "/page";
 
@@ -25,7 +27,7 @@ const basePagePath = role === "ROLE_ADMIN" ? "/page/admin" : "/page";
 const adminRoutes = [
   {
     path: `${basePagePath}/homeadmin`,
-    element: <StatisticsPage/>,
+    element: <StatisticsPage />,
   },
   {
     path: `${basePagePath}/product`,
@@ -61,7 +63,7 @@ const adminRoutes = [
 const userRoutes = [
   {
     path: `${basePagePath}/home`,
-    element: <h1> Đặt trang  chủ ở đây</h1>,
+    element: <Home />,
   },
   {
     path: `${basePagePath}/about`,
@@ -71,7 +73,7 @@ const userRoutes = [
     path: `${basePagePath}/product`,
     element: <ProductUserPage />,
   },
-   {
+  {
     path: `${basePagePath}/cremation-coffin`,
     element: <h1> Đặt quan tài hỏa táng ở đây</h1>,
   },
@@ -95,7 +97,15 @@ const userRoutes = [
     path: `${basePagePath}/coffin-production`,
     element: <h1> Đặt Quy Trình Sản Xuất Quan Tài ở đây</h1>,
   },
-  
+  {
+    path: `${basePagePath}/ContactForm`,
+    element: <ContactForm />,
+  },
+  {
+    path: `${basePagePath}/Services`,
+    element: <Services />,
+  },
+
 ];
 
 // Chỉ thêm adminRoutes nếu role là ADMIN
